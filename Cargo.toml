@@ -1,0 +1,21 @@
+[workspace]
+resolver = "2"
+members = [
+    "common",
+    "server",
+    "replayer",
+    "recorder",
+    "transcoder"
+]
+
+[workspace.dependencies]
+serde = { version = "1.0", features = ["derive"] }
+hyper = { version = "1", features = ["full"] }
+tokio = { version = "1", features = ["full"] }
+
+[profile.release]
+debug = 1
+opt-level = 3
+
+[profile.bench]
+debug = 1

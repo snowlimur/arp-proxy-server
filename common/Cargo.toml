@@ -1,0 +1,10 @@
+[package]
+name = "common"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+socket2 = { version = "0.5", features = ["all"] }
+tokio = { version = "1", features = ["full"] }
+sd-notify = "0.4"
+tracing = "0.1.41"

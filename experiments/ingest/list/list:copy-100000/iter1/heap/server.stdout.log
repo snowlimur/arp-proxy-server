@@ -1,0 +1,11 @@
+[2m2025-04-08T00:27:31.037155Z[0m [32m INFO[0m cache: ListCache { name: "copy", copy: true }
+[2m2025-04-08T00:27:31.037887Z[0m [32m INFO[0m ingester: listening on http://0.0.0.0:8445
+[2m2025-04-08T00:27:31.038096Z[0m [32m INFO[0m ingester: max buffer size is set to 100000
+[2m2025-04-08T00:27:31.038007Z[0m [32m INFO[0m transmitter: listening on http://0.0.0.0:8446
+[2m2025-04-08T00:27:31.038249Z[0m [32m INFO[0m transmitter: max buffer size is set to 100000
+[2m2025-04-08T00:28:03.459213Z[0m [32m INFO[0m received terminate signal
+[2m2025-04-08T00:28:03.459432Z[0m [32m INFO[0m transmitter: http server: graceful shutdown
+[2m2025-04-08T00:28:03.459441Z[0m [32m INFO[0m transmitter: http server: all connections gracefully closed
+[2m2025-04-08T00:28:03.459544Z[0m [32m INFO[0m ingester: http server: graceful shutdown
+[2m2025-04-08T00:28:03.459705Z[0m [32m INFO[0m ingester: http server: all connections gracefully closed
+[2m2025-04-08T00:28:03.459770Z[0m [32m INFO[0m done

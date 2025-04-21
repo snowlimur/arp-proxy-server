@@ -1,0 +1,37 @@
+# This file is used for automation purposes
+# We can describe how to install software we use to build
+# We also automated repo initialization after git clone here
+# For more information see 'desc' of each task
+# About tooling http://taskfile.dev/
+
+version: '3'
+
+includes:
+  server: ./server/Taskfile.yml
+  monitoring: ./monitoring/Taskfile.yml
+
+tasks:
+  recorder:
+    desc: Run the DASH record server
+    cmds:
+      - cargo build -p recorder --release
+      - ./target/release/recorder -c ./configs/recorder.toml
+
+  replayer:
+    desc: Run the DASH replay tool
+    cmds:
+      - ./target/release/replayer -c ./configs/replayer.toml
+
+  transcode:
+    desc: Run the transcoder
+    cmds:
+      - cargo run -p transcoder -- -c ./configs/encoder-1-200.toml -i ./samples/bbb-1080p-30sec.mp4 bbb-1-200/index.mpd
+      - cargo run -p transcoder -- -c ./configs/encoder-2-500.toml -i ./samples/bbb-1080p-30sec.mp4 bbb-2-500/index.mpd
+      - cargo run -p transcoder -- -c ./configs/encoder-4-1000.toml -i ./samples/bbb-1080p-30sec.mp4 bbb-4-1000/index.mpd
+      - cargo run -p transcoder -- -c ./configs/encoder-1-200.toml -i ./samples/football-1080p-30sec.mp4 football-1-200/index.mpd
+      - cargo run -p transcoder -- -c ./configs/encoder-2-500.toml -i ./samples/football-1080p-30sec.mp4 football-2-500/index.mpd
+      - cargo run -p transcoder -- -c ./configs/encoder-4-1000.toml -i ./samples/football-1080p-30sec.mp4 football-4-1000/index.mpd
+
+  fmt:
+    cmds:
+      - cargo fmt --all

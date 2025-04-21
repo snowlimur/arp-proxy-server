@@ -1,0 +1,69 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+tokio = { version = "1", features = ["full"] }
+http-body-util = "0.1"
+hyper-util = { version = "0.1", features = ["full"] }
+hyper = { version = "1", features = ["full"] }
+toml = "0.8.20"
+tracing-subscriber = "0.3.19"
+common = { path = "../common" }
+tracing = "0.1.41"
+bytes = "1.10.0"
+serde = { version = "1.0", features = ["derive"] }
+async-trait = "0.1.88"
+rand = "0.9.0"
+parking_lot = "0.12.3"
+futures-util = "0.3.31"
+uuid = { version = "1.16.0", features = ["v4", "v7"] }
+fnv = "1.0.7"
+rustc-hash = "2.1.1"
+dashmap = "7.0.0-rc2"
+papaya = "0.2.1"
+flurry = "0.5.2"
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["async_tokio", "html_reports"] }
+gperftools = "0.2.0"
+num_cpus = "1"
+stats-cli = "3.0.1"
+
+[[bench]]
+name = "hashmap"
+harness = false
+
+[[bench]]
+name = "fnv"
+harness = false
+
+[[bench]]
+name = "papaya"
+harness = false
+
+[[bench]]
+name = "dashmap"
+harness = false
+
+[[bench]]
+name = "unlocked_hashmaps"
+harness = false
+
+[[bench]]
+name = "list"
+harness = false
+
+[[bench]]
+name = "rw_sharded_map"
+harness = false
+
+[[bench]]
+name = "parking_lot_sharded_map"
+harness = false
+
+[[bench]]
+name = "http_client"
+harness = false

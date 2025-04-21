@@ -1,0 +1,9 @@
+version: '3'
+
+tasks:
+  up:
+    cmds:
+      - podman compose up -d
+  down:
+    cmds:
+      - podman compose down

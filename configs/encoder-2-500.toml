@@ -1,0 +1,75 @@
+[encoding]
+video_codec = "libx264"
+audio_codec = "aac"
+preset = "veryfast"
+tune = "zerolatency"
+keyframe_interval = 48
+sc_threshold = 0
+native_rate = true
+
+[dash]
+enabled = true
+segment_duration = 2 # seconds
+fragment_duration = 0.5 # seconds
+target_latency = 2 # seconds
+fragment_type = "duration"
+
+window_size = 5
+extra_window_size = 0
+
+utc_timing_url = "https://time.akamai.com/?iso"
+media_segment_name = "$RepresentationID$/$Number%05d$.$ext$"
+init_segment_name = "$RepresentationID$/init.$ext$"
+
+format_options = "movflags=cmaf"
+adaptation_sets = "id=0,streams=v id=1,streams=a"
+
+low_latency = true
+streaming = true
+write_prft = true
+index_correction = true
+use_template = true
+use_timeline = false
+ignore_io_errors = true
+
+[http]
+base_url = "http://localhost:9080"
+persistent = true
+method = "PUT"
+
+[[videos]]
+name = "1080p"
+setsar = "sar=1"
+scale = "w=-4:h=1080"
+bitrate = "6000k"
+maxrate = "6600k"
+bufsize = "12000k"
+
+[[videos]]
+name = "720p"
+setsar = "sar=1"
+scale = "w=-4:h=720"
+bitrate = "3000k"
+maxrate = "3300k"
+bufsize = "6000k"
+
+[[videos]]
+name = "480p"
+setsar = "sar=1"
+scale = "w=-4:h=480"
+bitrate = "2000k"
+maxrate = "2200k"
+bufsize = "4000k"
+
+[[videos]]
+name = "360p"
+setsar = "sar=1"
+scale = "w=-4:h=360"
+bitrate = "1000k"
+maxrate = "1100k"
+bufsize = "2000k"
+
+[audio]
+bitrate = "192k"
+sampling = 48000
+channels = 2

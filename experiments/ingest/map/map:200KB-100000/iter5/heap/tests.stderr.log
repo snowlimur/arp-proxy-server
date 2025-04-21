@@ -1,0 +1,1 @@
+task: [replayer] ./target/release/replayer -c ./configs/replayer.toml

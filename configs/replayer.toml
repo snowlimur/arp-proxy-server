@@ -1,0 +1,45 @@
+[target]
+url = "http://localhost:8445"
+
+[storage]
+path = "./samples/recorder"
+
+[[schedule.steps]]
+stream = "bbb-1-200"
+parallel = 200
+
+#[[schedule.steps]]
+#delay = "10s"
+#duration = "60s"
+#stream = "stream-1-200"
+#parallel = 100
+#
+#[[schedule.steps]]
+#delay = "10s"
+#duration = "60s"
+#stream = "stream-1-200"
+#parallel = 200
+#
+#[[schedule.steps]]
+#delay = "10s"
+#duration = "60s"
+#stream = "stream-1-200"
+#parallel = 300
+#
+#[[schedule.steps]]
+#delay = "10s"
+#duration = "60s"
+#stream = "stream-1-200"
+#parallel = 400
+#
+#[[schedule.steps]]
+#delay = "10s"
+#duration = "60s"
+#stream = "stream-1-200"
+#parallel = 500
+#
+#[[schedule.steps]]
+#delay = "10s"
+#duration = "60s"
+#stream = "stream-1-200"
+#parallel = 600

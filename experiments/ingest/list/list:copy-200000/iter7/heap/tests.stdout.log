@@ -1,0 +1,5 @@
+[2m2025-04-08T00:45:07.270944Z[0m [32m INFO[0m Running step: bbb-1-200 / 200
+[2m2025-04-08T00:45:07.270980Z[0m [32m INFO[0m ▶ All segments will be played once
+[2m2025-04-08T00:45:08.371283Z[0m [31mERROR[0m connection: hyper::Error(Shutdown, Os { code: 107, kind: NotConnected, message: "Transport endpoint is not connected" })
+[2m2025-04-08T00:45:08.371321Z[0m [31mERROR[0m replay: uri http://localhost:8445/test-28: Request error: send request: connection error
+[2m2025-04-08T00:45:39.194360Z[0m [32m INFO[0m ▶ Step is finished: 31 s. Bytes sent: 72464 Mb. Speed: 2269.93 Mbps

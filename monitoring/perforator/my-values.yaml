@@ -1,0 +1,30 @@
+databases:
+  postgresql:
+    migrations:
+      enabled: true
+    db: "perforator"
+    user: "perforator"
+    password: "perforator"
+  clickhouse:
+    migrations:
+      enabled: true
+    insecure: true
+    db: "perforator"
+    user: "perforator"
+    password: "perforator"
+  s3:
+    buckets:
+      profiles: "perforator-profile"
+      binaries: "perforator-binary"
+      taskResults: "perforator-task-results"
+      binariesGSYM: "perforator-binary-gsym"
+    insecure: true
+    force_path_style: true
+    accessKey: "perforator"
+    secretKey: "perforator"
+
+proxy:
+  url_prefix: "http://localhost:8080/static/results/"
+
+testing:
+  enableTestingDatabases: true

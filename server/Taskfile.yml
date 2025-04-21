@@ -1,0 +1,37 @@
+# This file is used for automation purposes
+# We can describe how to install software we use to build
+# We also automated repo initialization after git clone here
+# For more information see 'desc' of each task
+# About tooling http://taskfile.dev/
+
+version: '3'
+
+tasks:
+  dev:
+    desc: Run the CMAF server
+    cmds:
+      - cargo run -p server -- -c ./configs/server.toml {{.CLI_ARGS}}
+
+  release:
+    desc: Build a release version of CMAF server
+    cmds:
+      - cargo build -p server --release
+
+  run:
+    desc: Run the release version of CMAF server
+    deps:
+      - task: release
+    cmds:
+      - ./target/release/server -c ./configs/server.toml {{.CLI_ARGS}}
+
+  profile:cpu:
+    deps:
+      - task: release
+    cmds:
+      - env LD_PRELOAD="/usr/lib/x86_64-linux-gnu/libprofiler.so" CPUPROFILE="./profiles/server.cpu.prof" ./target/release/server -c ./configs/server.toml {{.CLI_ARGS}}
+
+  profile:heap:
+    deps:
+      - task: release
+    cmds:
+      - env LD_PRELOAD="/usr/lib/x86_64-linux-gnu/libtcmalloc_and_profiler.so" HEAPPROFILE="./profiles/server.heap" ./target/release/server -c ./configs/server.toml {{.CLI_ARGS}}

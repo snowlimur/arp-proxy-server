@@ -1,0 +1,13 @@
+Starting tracking the heap
+Dumping heap profile to ./tmp/map/map:100KB-10000/iter0/heap/server.heap.0001.heap (100 MB currently in use)
+Dumping heap profile to ./tmp/map/map:100KB-10000/iter0/heap/server.heap.0002.heap (1623 MB allocated cumulatively, 120 MB currently in use)
+Dumping heap profile to ./tmp/map/map:100KB-10000/iter0/heap/server.heap.0003.heap (2647 MB allocated cumulatively, 114 MB currently in use)
+Dumping heap profile to ./tmp/map/map:100KB-10000/iter0/heap/server.heap.0004.heap (3671 MB allocated cumulatively, 113 MB currently in use)
+Dumping heap profile to ./tmp/map/map:100KB-10000/iter0/heap/server.heap.0005.heap (4695 MB allocated cumulatively, 115 MB currently in use)
+Dumping heap profile to ./tmp/map/map:100KB-10000/iter0/heap/server.heap.0006.heap (5719 MB allocated cumulatively, 117 MB currently in use)
+Dumping heap profile to ./tmp/map/map:100KB-10000/iter0/heap/server.heap.0007.heap (6743 MB allocated cumulatively, 114 MB currently in use)
+Dumping heap profile to ./tmp/map/map:100KB-10000/iter0/heap/server.heap.0008.heap (7767 MB allocated cumulatively, 115 MB currently in use)
+Dumping heap profile to ./tmp/map/map:100KB-10000/iter0/heap/server.heap.0009.heap (8791 MB allocated cumulatively, 59 MB currently in use)
+Dumping heap profile to ./tmp/map/map:100KB-10000/iter0/heap/server.heap.0010.heap (9815 MB allocated cumulatively, 21 MB currently in use)
+Dumping heap profile to ./tmp/map/map:100KB-10000/iter0/heap/server.heap.0011.heap (10839 MB allocated cumulatively, 20 MB currently in use)
+Dumping heap profile to ./tmp/map/map:100KB-10000/iter0/heap/server.heap.0012.heap (Exiting, 71 kB in use)

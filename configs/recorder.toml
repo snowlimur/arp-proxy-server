@@ -1,0 +1,8 @@
+[http]
+addr = "127.0.0.1:9080"
+
+[storage]
+path = "./tmp/recorder"
+
+[stream]
+inactive_timeout = 10

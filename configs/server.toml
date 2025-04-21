@@ -1,0 +1,52 @@
+[runtime]
+threads = 16
+
+[ingester]
+addr = "0.0.0.0:8445"
+
+[transmitter]
+addr = "0.0.0.0:8446"
+
+[[cache.static]]
+name = "bbb-1-200/1000/init.m4s"
+file_path = "./samples/segments/init.m4s"
+shards = 1000
+streams = 1000
+tracks = 5
+segments = 30
+
+[[cache.static]]
+name = "bbb-1-200/1/720p"
+file_path = "./samples/segments/720p.m4s"
+shards = 1
+streams = 1000
+tracks = 5
+segments = 30
+
+[[cache.static]]
+name = "bbb-1-200/1000/720p"
+file_path = "./samples/segments/720p.m4s"
+shards = 1000
+streams = 1000
+tracks = 5
+segments = 30
+
+[[cache.list]]
+name = "non-copy"
+copy = false
+
+[[cache.list]]
+name = "copy"
+copy = true
+
+[[cache.map]]
+name = "0KB"
+preallocate = 0
+
+[[cache.map]]
+name = "100KB"
+preallocate = 100000
+
+[[cache.map]]
+name = "200KB"
+preallocate = 200000

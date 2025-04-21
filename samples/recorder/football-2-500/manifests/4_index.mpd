@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="urn:mpeg:dash:schema:mpd:2011"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd"
+	profiles="urn:mpeg:dash:profile:isoff-live:2011"
+	type="dynamic"
+	minimumUpdatePeriod="PT500S"
+	availabilityStartTime="2025-04-06T03:02:50.875Z"
+	publishTime="2025-04-06T03:02:54.519Z"
+	timeShiftBufferDepth="PT19.2S"
+	maxSegmentDuration="PT2.0S"
+	minBufferTime="PT1.9S">
+	<ProgramInformation>
+	</ProgramInformation>
+	<ServiceDescription id="0">
+		<Latency target="2000" referenceId="0"/>
+	</ServiceDescription>
+	<Period id="0" start="PT0.0S">
+		<AdaptationSet id="0" contentType="video" startWithSAP="1" segmentAlignment="true" bitstreamSwitching="true" frameRate="25/1" maxWidth="1920" maxHeight="1080" par="16:9">
+			<Resync dT="500000" type="0"/>
+			<Representation id="0" mimeType="video/mp4" codecs="avc1.640028" bandwidth="6000000" width="1920" height="1080" sar="1:1">
+				<ProducerReferenceTime id="0" inband="true" type="captured" wallClockTime="2025-04-06T03:02:50.875Z" presentationTime="0">
+					<UTCTiming schemeIdUri="urn:mpeg:dash:utc:http-xsdate:2014" value="https://time.akamai.com/?iso"/>
+				</ProducerReferenceTime>
+				<Resync dT="1920000" type="1"/>
+				<SegmentTemplate timescale="1000000" duration="2000000" availabilityTimeOffset="1.500" availabilityTimeComplete="false" initialization="$RepresentationID$/init.m4s" media="$RepresentationID$/$Number%05d$.m4s" startNumber="1">
+				</SegmentTemplate>
+			</Representation>
+			<Representation id="1" mimeType="video/mp4" codecs="avc1.64001f" bandwidth="3000000" width="1280" height="720" sar="1:1">
+				<Resync dT="1920000" type="1"/>
+				<SegmentTemplate timescale="1000000" duration="2000000" availabilityTimeOffset="1.500" availabilityTimeComplete="false" initialization="$RepresentationID$/init.m4s" media="$RepresentationID$/$Number%05d$.m4s" startNumber="1">
+				</SegmentTemplate>
+			</Representation>
+			<Representation id="2" mimeType="video/mp4" codecs="avc1.64001e" bandwidth="2000000" width="852" height="480" sar="640:639">
+				<Resync dT="1920000" type="1"/>
+				<SegmentTemplate timescale="1000000" duration="2000000" availabilityTimeOffset="1.500" availabilityTimeComplete="false" initialization="$RepresentationID$/init.m4s" media="$RepresentationID$/$Number%05d$.m4s" startNumber="1">
+				</SegmentTemplate>
+			</Representation>
+			<Representation id="3" mimeType="video/mp4" codecs="avc1.64001e" bandwidth="1000000" width="640" height="360" sar="1:1">
+				<Resync dT="1920000" type="1"/>
+				<SegmentTemplate timescale="1000000" duration="2000000" availabilityTimeOffset="1.500" availabilityTimeComplete="false" initialization="$RepresentationID$/init.m4s" media="$RepresentationID$/$Number%05d$.m4s" startNumber="1">
+				</SegmentTemplate>
+			</Representation>
+		</AdaptationSet>
+		<AdaptationSet id="1" contentType="audio" startWithSAP="1" segmentAlignment="true" bitstreamSwitching="true">
+		</AdaptationSet>
+	</Period>
+	<UTCTiming schemeIdUri="urn:mpeg:dash:utc:http-xsdate:2014" value="https://time.akamai.com/?iso"/>
+</MPD>

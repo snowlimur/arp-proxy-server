@@ -1,0 +1,11 @@
+[2m2025-04-07T22:39:58.306066Z[0m [32m INFO[0m cache: MapCache { name: "100KB", preallocate: 100000 }
+[2m2025-04-07T22:39:58.306725Z[0m [32m INFO[0m ingester: listening on http://0.0.0.0:8445
+[2m2025-04-07T22:39:58.307019Z[0m [32m INFO[0m ingester: max buffer size is default ~400KB
+[2m2025-04-07T22:39:58.306800Z[0m [32m INFO[0m transmitter: listening on http://0.0.0.0:8446
+[2m2025-04-07T22:39:58.307089Z[0m [32m INFO[0m transmitter: max buffer size is default ~400KB
+[2m2025-04-07T22:40:30.724224Z[0m [32m INFO[0m received terminate signal
+[2m2025-04-07T22:40:30.724264Z[0m [32m INFO[0m transmitter: http server: graceful shutdown
+[2m2025-04-07T22:40:30.724272Z[0m [32m INFO[0m transmitter: http server: all connections gracefully closed
+[2m2025-04-07T22:40:30.724440Z[0m [32m INFO[0m ingester: http server: graceful shutdown
+[2m2025-04-07T22:40:30.724624Z[0m [32m INFO[0m ingester: http server: all connections gracefully closed
+[2m2025-04-07T22:40:30.724676Z[0m [32m INFO[0m done
